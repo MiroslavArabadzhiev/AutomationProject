@@ -1,12 +1,12 @@
 <suite name="Web test suite" verbose="1">
     <test name="Smoke Tests">
         <classes>
-            <class name="TestBase"></class>
+            <class name="TestLogin"></class>
         </classes>
     </test>
     <test name="Regression Tests">
         <classes>
-            <class name="TestBase"></class>
+            <class name="TestLogin"></class>
             <methods>
                 <include name="testSingleParameter">
                     <parameter name="full-name" value="Harry Potter"></parameter>
