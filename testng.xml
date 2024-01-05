@@ -1,0 +1,21 @@
+<suite name="Web test suite" verbose="1">
+    <test name="Smoke Tests">
+        <classes>
+            <class name="TestBase"></class>
+        </classes>
+    </test>
+    <test name="Regression Tests">
+        <classes>
+            <class name="TestBase"></class>
+            <methods>
+                <include name="testSingleParameter">
+                    <parameter name="full-name" value="Harry Potter"></parameter>
+                </include>
+                <include name="testMultiParameters">
+                    <parameter name="num1" value="3"></parameter>
+                    <parameter name="num2" value="2"></parameter>
+                </include>
+            </methods>
+        </classes>
+    </test>
+</suite>
