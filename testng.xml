@@ -1,19 +1,12 @@
-<suite name="Web test suite" verbose="1">
-    <test name="Smoke Tests">
-        <classes>
-            <class name="TestLogin"></class>
-        </classes>
-    </test>
-    <test name="Regression Tests">
+<suite name="Skillo test suite" verbose="1">
+    <test name="All Tests">
         <classes>
             <class name="TestLogin"></class>
             <methods>
-                <include name="testSingleParameter">
-                    <parameter name="full-name" value="Harry Potter"></parameter>
-                </include>
-                <include name="testMultiParameters">
-                    <parameter name="num1" value="3"></parameter>
-                    <parameter name="num2" value="2"></parameter>
+                <include name="testLogin">
+                    <parameter name="username" value="Test_MA"></parameter>
+                    <parameter name="password" value="Test123"></parameter>
+                    <parameter name="usernameProfilePage" value="Test_MA"></parameter>
                 </include>
             </methods>
         </classes>

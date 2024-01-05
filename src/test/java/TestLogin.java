@@ -14,15 +14,9 @@ public class TestLogin extends TestBase {
 
     }
 
-    @DataProvider(name = "getUsers")
-    private Object[][] getUsers() {
-        return new Object[][]{
-                {"Test_MA", "Test123", "Test_MA"}
-        };
-    }
-
-    //invocationCount shows how many times a test should be executed
-    @Test(dataProvider = "getUsers")
+    //This test verifies if the user can log in successfully
+    @Parameters({"username", "password", "usernameProfilePage"})
+    @Test
     private void testLogin(String username, String password, String usernameProfilePage) {
         WebDriverWait wait = new WebDriverWait(super.getDriver(), Duration.ofSeconds(30));
 
