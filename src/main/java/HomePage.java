@@ -18,7 +18,7 @@ public class HomePage {
         return wait.until(ExpectedConditions.urlContains(PAGE_URL));
     }
 
-    public void navigatTo(){
+    public void navigateTo(){
         driver.get(PAGE_URL);
     }
 }

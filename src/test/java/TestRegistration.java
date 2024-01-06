@@ -34,53 +34,55 @@ public class TestRegistration extends TestBase {
     private void testRegistration (String username, String email, String password) {
         WebDriverWait wait = new WebDriverWait(super.getDriver(), Duration.ofSeconds(30));
 
-        //Home Page Class
+        //Open the Skillo website
         HomePage homePage = new HomePage(super.getDriver());
-        homePage.navigatTo();
+        homePage.navigateTo();
+
+        //Check we are on the correct page
         homePage.isUrlLoaded();
 
-        //Header Class
+        //Click the "Login" button
         Header headerMenu = new Header(super.getDriver());
         headerMenu.clickLoginLink();
 
-        //Login Class
+        //Validate the "Login" page is loaded
         LoginPage loginPage = new LoginPage(super.getDriver());
         loginPage.isUrlLoaded();
 
-        //Validate Sign In form is visible
+        //Validate the "Sign In" form is visible
         String elemText = loginPage.getSignInText();
         Assert.assertEquals(elemText, "Sign in");
 
-        //Click the Register button
+        //Click the "Register" button
         loginPage.clickRegisterButton();
 
         //Validate the URL of the Registration form
         RegistrationPage registrationPage = new RegistrationPage(super.getDriver());
         registrationPage.isRegisterUrlLoaded();
 
-        //Validate Sign Up form is visible
+        //Validate the "Sign Up" form is visible
         elemText = registrationPage.getSignUpText();
         Assert.assertEquals(elemText, "Sign up");
 
-        //Input username
+        //Input valid username
         registrationPage.populateUsername(username);
 
-        //Input email
+        //Input valid email
         registrationPage.populateEmail(email);
 
-        //Input password
+        //Input valid password
         registrationPage.populatePassword(password);
 
         //Input confirm password
         registrationPage.populateConfirmPassword(password);
 
-        //Click the Sign In button
+        //Click the "Sign In" button
         registrationPage.clickSingInButton();
 
         //Wait for the Home page to load
         registrationPage.isHomeUrlLoaded();
 
-        //Click on Profile button
+        //Click the "Profile" button
         registrationPage.clickProfileButton();
 
         //Validate the user profile link is loaded

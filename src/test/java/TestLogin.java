@@ -20,20 +20,22 @@ public class TestLogin extends TestBase {
     private void testLogin(String username, String password, String usernameProfilePage) {
         WebDriverWait wait = new WebDriverWait(super.getDriver(), Duration.ofSeconds(30));
 
-        //Home Page Class
+        //Open the Skillo website
         HomePage homePage = new HomePage(super.getDriver());
-        homePage.navigatTo();
+        homePage.navigateTo();
+
+        //Check we are on the correct page
         homePage.isUrlLoaded();
 
-        //Header Class
+        //Click the "Login" button
         Header headerMenu = new Header(super.getDriver());
         headerMenu.clickLoginLink();
 
-        //Login Class
+        //Validate the "Login" page is loaded
         LoginPage loginPage = new LoginPage(super.getDriver());
         loginPage.isUrlLoaded();
 
-        //Get Sign in text
+        //Validate the "Sign In" form is visible
         String elemText = loginPage.getSignInText();
         Assert.assertEquals(elemText, "Sign in");
 
@@ -49,11 +51,11 @@ public class TestLogin extends TestBase {
         //Click the Profile button
         headerMenu.clickProfileLink();
 
-        //Profile Class
+        //Validate the "Profile" page is loaded
         ProfilePage profilePage = new ProfilePage(super.getDriver());
         profilePage.isUrlLoaded();
 
-        //Get Logged in user text
+        //Validate that the username matches the username provided
         Assert.assertEquals(profilePage.getUsername(), usernameProfilePage);
     }
 }
