@@ -1,5 +1,5 @@
-<suite name="Skillo test suite" verbose="1">
-    <test name="All Tests">
+<suite name="All Tests" verbose="1">
+    <test name="Test Login">
         <classes>
             <class name="TestLogin"></class>
             <methods>
@@ -8,6 +8,14 @@
                     <parameter name="password" value="Test123"></parameter>
                     <parameter name="usernameProfilePage" value="Test_MA"></parameter>
                 </include>
+            </methods>
+        </classes>
+    </test>
+    <test name="Test Registration">
+        <classes>
+            <class name="TestRegistration"></class>
+            <methods>
+                <include name="testRegistration"></include>
             </methods>
         </classes>
     </test>

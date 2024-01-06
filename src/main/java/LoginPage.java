@@ -24,6 +24,9 @@ public class LoginPage {
     @FindBy(id = "sign-in-button")
     private WebElement signInButton;
 
+    @FindBy(linkText = "Register")
+    private WebElement registerButton;
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver,this);
@@ -49,8 +52,11 @@ public class LoginPage {
     }
 
     public void clickSignIn(){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        signInButton.click();
+         signInButton.click();
+    }
+
+    public void clickRegisterButton(){
+        registerButton.click();
     }
 
 }

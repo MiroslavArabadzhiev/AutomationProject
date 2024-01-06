@@ -49,7 +49,7 @@ public class TestLogin extends TestBase {
         //Click the Profile button
         headerMenu.clickProfileLink();
 
-        //Create Profile Class
+        //Profile Class
         ProfilePage profilePage = new ProfilePage(super.getDriver());
         profilePage.isUrlLoaded();
 

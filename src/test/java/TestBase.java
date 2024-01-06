@@ -114,11 +114,11 @@ public class TestBase {
         elem.click();
     }
 
-    private String generateRandomString(int minLenghtInclusive, int maxLenghtInclusive) {
+    public String generateRandomString(int minLenghtInclusive, int maxLenghtInclusive) {
         return RandomStringUtils.randomAlphanumeric(minLenghtInclusive, maxLenghtInclusive);
     }
 
-    private String generateRandomEmail(int minLenghtInclusive, int maxLenghtInclusive) {
+    public String generateRandomEmail(int minLenghtInclusive, int maxLenghtInclusive) {
         return RandomStringUtils.randomAlphanumeric(minLenghtInclusive, maxLenghtInclusive) + "@gmail.com";
     }
 
