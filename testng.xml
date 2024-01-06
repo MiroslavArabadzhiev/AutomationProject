@@ -19,6 +19,19 @@
             </methods>
         </classes>
     </test>
+    <test name="Test Post Interactions">
+        <classes>
+            <class name="TestPostInteractions"></class>
+            <methods>
+                <include name="testPostInteractions">
+                    <parameter name="username" value="Test_MA"></parameter>
+                    <parameter name="password" value="Test123"></parameter>
+                    <parameter name="usernameProfilePage" value="Test_MA"></parameter>
+                    <parameter name="comment" value="Nice pic!"></parameter>
+                </include>
+            </methods>
+        </classes>
+    </test>
     <test name="Test Creating a New Private Post">
         <classes>
             <class name="TestCreatePost"></class>

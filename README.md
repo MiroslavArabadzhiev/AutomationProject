@@ -37,9 +37,23 @@ This is the README file of the Automation Project. The project contains 5 automa
 17. Validate the username provided matches the username on the Profile page
 
 
-#3 Test Creating a New Private Post
 
-1. Perform Test Login
+#3 Test Post Interactions
+
+1. Perform all the steps from the Test Login
+2. Click the "Home" button
+3. Click on the profile of the first user
+4. Click the "Follow" button
+5. Click on "All" posts
+6. Click the first image
+7. Click the "Like" button
+8. Click the "Dislike" button
+9. Write a comment and wait until it is visible
+
+
+#4 Test Creating a New Private Post
+
+1. Perform all the steps from the Test Login
 2. After the final step click on the "New post" button
 3. Validate the "New post" page is loaded
 4. Upload a picture

@@ -98,7 +98,5 @@ public class TestCreatePost extends TestBase {
 
         //Click on "All" posts
         profilePage.clickAllPosts();
-
-
     }
 }

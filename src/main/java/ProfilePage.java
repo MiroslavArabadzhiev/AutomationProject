@@ -1,3 +1,4 @@
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,10 +15,20 @@ public class ProfilePage {
 
     @FindBy(tagName = "h2")
     private WebElement loggedInUser;
+    @FindBy(xpath = "(//a[@class=\"post-user\"])[1]")
+    private WebElement postUser;
     @FindBy(xpath = "//*[contains(text(), \"All\")]")
     private WebElement allPosts;
-    @FindBy(xpath = "//*[@class=\"post-img\"]")
-    private WebElement postImage;
+    @FindBy(css = ".profile-edit-btn")
+    private WebElement followButton;
+    @FindBy(css = "div.post-img")
+    private WebElement firstImage;
+    @FindBy(css = "i.like")
+    private WebElement likeButton;
+    @FindBy(xpath = "//*[@formcontrolname=\"content\"]")
+    private WebElement commentField;
+    @FindBy(xpath = "//*[contains(text(), \"Test_MA\")]")
+    private WebElement visibleComment;
 
 
     public ProfilePage(WebDriver driver) {
@@ -34,7 +45,32 @@ public class ProfilePage {
         return loggedInUser.getText();
     }
 
+    public void clickPostUser(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait.until(ExpectedConditions.elementToBeClickable(postUser));
+        postUser.click();
+    }
+
     public void clickAllPosts(){
         allPosts.click();
+    }
+
+    public void clickFollowButton(){
+        followButton.click();
+    }
+
+    public void clickFirstImage(){
+        firstImage.click();
+    }
+
+    public void clickLikeButton(){
+        likeButton.click();
+    }
+
+    public void commentPost(String comment){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+        commentField.sendKeys(comment);
+        commentField.sendKeys(Keys.ENTER);
+        wait.until(ExpectedConditions.visibilityOf(visibleComment));
     }
 }

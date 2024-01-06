@@ -58,5 +58,4 @@ public class LoginPage {
     public void clickRegisterButton(){
         registerButton.click();
     }
-
 }
