@@ -19,4 +19,12 @@
             </methods>
         </classes>
     </test>
+    <test name="Test Creating a New Private Post">
+        <classes>
+            <class name="TestCreatePost"></class>
+            <methods>
+                <include name="testCreatePost"></include>
+            </methods>
+        </classes>
+    </test>
 </suite>

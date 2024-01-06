@@ -1,4 +1,3 @@
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,6 +14,11 @@ public class ProfilePage {
 
     @FindBy(tagName = "h2")
     private WebElement loggedInUser;
+    @FindBy(xpath = "//*[contains(text(), \"All\")]")
+    private WebElement allPosts;
+    @FindBy(xpath = "//*[@class=\"post-img\"]")
+    private WebElement postImage;
+
 
     public ProfilePage(WebDriver driver) {
         this.driver = driver;
@@ -28,5 +32,9 @@ public class ProfilePage {
 
     public String getUsername(){
         return loggedInUser.getText();
+    }
+
+    public void clickAllPosts(){
+        allPosts.click();
     }
 }

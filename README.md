@@ -48,3 +48,4 @@ This is the README file of the Automation Project. The project contains 5 automa
 7. Fill in the caption
 8. Toggle to a Private Post
 9. Click on the "Create Post" button
+10. Click on "All" posts

@@ -32,7 +32,6 @@ public class TestRegistration extends TestBase {
     //This test registers a new user
     @Test(dataProvider = "userData")
     private void testRegistration (String username, String email, String password) {
-        WebDriverWait wait = new WebDriverWait(super.getDriver(), Duration.ofSeconds(30));
 
         //Open the Skillo website
         HomePage homePage = new HomePage(super.getDriver());

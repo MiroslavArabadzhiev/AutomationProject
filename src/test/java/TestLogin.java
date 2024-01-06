@@ -18,7 +18,6 @@ public class TestLogin extends TestBase {
     @Parameters({"username", "password", "usernameProfilePage"})
     @Test
     private void testLogin(String username, String password, String usernameProfilePage) {
-        WebDriverWait wait = new WebDriverWait(super.getDriver(), Duration.ofSeconds(30));
 
         //Open the Skillo website
         HomePage homePage = new HomePage(super.getDriver());
