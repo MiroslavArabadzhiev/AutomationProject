@@ -63,3 +63,13 @@ This is the README file of the Automation Project. The project contains 5 automa
 8. Toggle to a Private Post
 9. Click on the "Create Post" button
 10. Click on "All" posts
+
+
+#5 Test Logout
+
+1. Perform all the steps from the Test Login
+2. Get the number of posts and print it
+3. Get the number of followers and print it
+4. Get the number of followings and print it
+5. Click the "Logout" button
+6. Validate that the user has been logged out

@@ -40,4 +40,16 @@
             </methods>
         </classes>
     </test>
+    <test name="Test Logout">
+        <classes>
+            <class name="TestLogout"></class>
+            <methods>
+                <include name="testLogout">
+                    <parameter name="username" value="Test_MA"></parameter>
+                    <parameter name="password" value="Test123"></parameter>
+                    <parameter name="usernameProfilePage" value="Test_MA"></parameter>
+                </include>
+            </methods>
+        </classes>
+    </test>
 </suite>

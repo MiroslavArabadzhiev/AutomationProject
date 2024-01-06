@@ -19,6 +19,8 @@ public class Header {
     private WebElement newPostLink;
     @FindBy(id = "nav-link-home")
     private WebElement homeLink;
+    @FindBy(css = ".fa-sign-out-alt")
+    private WebElement logoutLink;
 
     public Header(WebDriver driver) {
         this.driver = driver;
@@ -47,5 +49,9 @@ public class Header {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         wait.until(ExpectedConditions.elementToBeClickable(homeLink));
         homeLink.click();
+    }
+
+    public void clickLogoutLink(){
+        logoutLink.click();
     }
 }

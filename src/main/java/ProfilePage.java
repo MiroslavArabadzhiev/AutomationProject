@@ -29,6 +29,12 @@ public class ProfilePage {
     private WebElement commentField;
     @FindBy(xpath = "//*[contains(text(), \"Test_MA\")]")
     private WebElement visibleComment;
+    @FindBy(xpath = "//li[contains(text(), \"posts\")]")
+    private WebElement numberPosts;
+    @FindBy(id = "followers")
+    private WebElement numberFollowers;
+    @FindBy(id = "following")
+    private WebElement numberFollowings;
 
 
     public ProfilePage(WebDriver driver) {
@@ -72,5 +78,17 @@ public class ProfilePage {
         commentField.sendKeys(comment);
         commentField.sendKeys(Keys.ENTER);
         wait.until(ExpectedConditions.visibilityOf(visibleComment));
+    }
+
+    public void getNumberPosts(){
+        System.out.println("The number of posts is: " + numberPosts.getText());
+    }
+
+    public void getNumberFollowers(){
+        System.out.println("The number of followers is: " + numberFollowers.getText());
+    }
+
+    public void getNumberFollowings(){
+        System.out.println("The number of followings is: " + numberFollowings.getText());
     }
 }
