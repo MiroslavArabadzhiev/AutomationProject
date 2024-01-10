@@ -10,13 +10,15 @@ public class TestPostInteractions extends TestBase {
 
     private WebDriver driver;
 
-    public static void main(String[] args) {
-
+    @DataProvider(name = "userData")
+    private Object[][] userData() {
+        return new Object[][]{
+                {"Test_MA", "Test123", "Test_MA", "Nice pic!"}
+        };
     }
 
     //This test opens the first user on the Home Page, Follows the user, likes and dislikes their most recent post
-    @Parameters({"username", "password", "usernameProfilePage", "comment"})
-    @Test
+    @Test(dataProvider = "userData")
     private void testPostInteractions(String username, String password, String usernameProfilePage, String comment) {
 
         //Open the Skillo website

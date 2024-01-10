@@ -15,10 +15,6 @@ public class TestRegistration extends TestBase {
 
     private WebDriver driver;
 
-    public static void main(String[] args) {
-
-    }
-
     @DataProvider(name = "userData")
     private Object[][] userData() {
         TestBase testBase = new TestBase();

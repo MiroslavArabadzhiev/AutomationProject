@@ -14,9 +14,6 @@ public class TestCreatePost extends TestBase {
 
     private WebDriver driver;
 
-    public static void main(String[] args) {
-
-    }
     @DataProvider(name = "postPicture")
     private Object[][] postPicture() {
 

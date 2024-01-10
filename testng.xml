@@ -3,11 +3,7 @@
         <classes>
             <class name="TestLogin"></class>
             <methods>
-                <include name="testLogin">
-                    <parameter name="username" value="Test_MA"></parameter>
-                    <parameter name="password" value="Test123"></parameter>
-                    <parameter name="usernameProfilePage" value="Test_MA"></parameter>
-                </include>
+                <include name="testLogin"></include>
             </methods>
         </classes>
     </test>
@@ -23,12 +19,7 @@
         <classes>
             <class name="TestPostInteractions"></class>
             <methods>
-                <include name="testPostInteractions">
-                    <parameter name="username" value="Test_MA"></parameter>
-                    <parameter name="password" value="Test123"></parameter>
-                    <parameter name="usernameProfilePage" value="Test_MA"></parameter>
-                    <parameter name="comment" value="Nice pic!"></parameter>
-                </include>
+                <include name="testPostInteractions"></include>
             </methods>
         </classes>
     </test>
@@ -44,11 +35,7 @@
         <classes>
             <class name="TestLogout"></class>
             <methods>
-                <include name="testLogout">
-                    <parameter name="username" value="Test_MA"></parameter>
-                    <parameter name="password" value="Test123"></parameter>
-                    <parameter name="usernameProfilePage" value="Test_MA"></parameter>
-                </include>
+                <include name="testLogout"></include>
             </methods>
         </classes>
     </test>

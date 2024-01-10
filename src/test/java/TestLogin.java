@@ -10,13 +10,15 @@ public class TestLogin extends TestBase {
 
     private WebDriver driver;
 
-    public static void main(String[] args) {
-
+    @DataProvider(name = "userData")
+    private Object[][] userData() {
+        return new Object[][]{
+                {"Test_MA", "Test123", "Test_MA"}
+        };
     }
 
     //This test verifies if the user can log in successfully
-    @Parameters({"username", "password", "usernameProfilePage"})
-    @Test
+    @Test(dataProvider = "userData")
     private void testLogin(String username, String password, String usernameProfilePage) {
 
         //Open the Skillo website
